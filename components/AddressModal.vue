@@ -374,7 +374,7 @@ export default {
     },
     async getLocation(coordinates) {
       await fetch(
-        "http://nominatim.openstreetmap.org/reverse?format=json&lon=" +
+        "https://nominatim.openstreetmap.org/reverse?format=json&lon=" +
           coordinates[0] +
           "&lat=" +
           coordinates[1]
