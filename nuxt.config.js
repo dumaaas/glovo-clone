@@ -55,7 +55,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@/modules/vueLayers',
+    '@/modules/vuelayers.js',
     '@nuxtjs/axios'
   ],
 
