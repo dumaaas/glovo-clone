@@ -131,7 +131,8 @@
                       cursor-pointer
                       text-[#00a082] text-[14px]
                       leading-[22px]
-                      ml-[40px]
+                      md:ml-[40px]
+                      ml-[8px]
                     "
                   >
                     Ili postavi svoju lokaciju na mapi
