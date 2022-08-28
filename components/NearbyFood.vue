@@ -137,7 +137,6 @@ export default {
         this.getNearbyPlaces();
       },
       deep: true,
-      immediate: true,
     },
   },
   async mounted() {},
