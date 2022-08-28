@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="">
+    <div class="px-[7.5%]">
       <div
         v-if="!locationData"
         @click="showModal = true"
         class="flex items-center justify-center flex-col pb-[25px] gap-[4px]"
       >
-        <p class="text-[18px] leading-[25px] text-black font-bold">
+        <p class="text-[18px] leading-[25px] text-black font-bold text-center">
           Unesite svoju adresu i saznaj
           <span
             class="
@@ -67,7 +67,7 @@
           </div>
         </div>
       </div>
-      <div v-else>
+      <div v-else class="md:pt-0 pt-[20px]">
         <h2
           class="text-[24px] leading-[29px] text-black font-light text-center"
         >
@@ -102,7 +102,8 @@
             justify-center
             gap-[16px]
             flex-wrap
-            py-[100px]
+            md:py-[100px]
+            py-[60px]
           "
         >
           <div

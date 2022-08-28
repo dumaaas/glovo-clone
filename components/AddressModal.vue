@@ -2,7 +2,7 @@
   <Transition name="modal">
     <div v-if="showModal" class="modal-mask">
       <div class="modal-wrapper">
-        <div class="modal-container">
+        <div class="modal-container md:mx-auto mx-[7.5%]">
           <div
             :class="
               activeStep == 2 ? 'justify-between ml-[30px]' : 'justify-end'
@@ -23,11 +23,13 @@
             />
           </div>
 
-          <div class="modal-body pb-[72px] px-[48px] pt-[20px]">
+          <div class="modal-body pb-[72px] md:px-[48px] px-[7.5%] md:pt-[20px] pt-[40px]">
             <h1
               class="
-                text-[28px]
-                leading-[32px]
+                md:text-[28px]
+                md:leading-[32px]
+                text-[24px]
+                leading-[27px]
                 text-black text-center
                 font-bold
                 mb-[40px]
@@ -39,9 +41,9 @@
                   : "Postavi čiodu na svoju adresu na mapi"
               }}
             </h1>
-            <div v-if="activeStep == 1" class="flex flex-row gap-[25px]">
+            <div v-if="activeStep == 1" class="flex flex-row gap-[25px] flex-wrap">
               <div
-                class="flex-[50%] justify-between items-stretch flex flex-col"
+                class="md:flex-[48%] flex-[100%] justify-between items-stretch flex flex-col md:gap-0 gap-[20px]"
               >
                 <div>
                   <div class="flex flex-row items-center gap-[10px] relative">
@@ -89,7 +91,7 @@
                         z-10
                       "
                     >
-                      Pretraži ulicu, gradove, kvartov..
+                      Pretraži ulice, gradove..
                     </span>
                   </div>
                   <div
@@ -99,7 +101,7 @@
                       flex flex-row
                       gap-[8px]
                       items-center
-                      justify-center
+                      md:justify-center
                       w-full
                       pt-[30px]
                     "
@@ -110,7 +112,7 @@
                       src="https://res.cloudinary.com/glovoapp/image/fetch//q_auto/https://glovoapp.com/images/svg/location.svg"
                     />
                     <p
-                      class="text-[#00a082] text-[14px] leading-[22px] mr-[15%]"
+                      class="text-[#00a082] text-[14px] leading-[22px] mr-[15%] "
                     >
                       Koristi trenutnu lokaciju
                     </p>
@@ -136,7 +138,7 @@
                   </p>
                 </div>
               </div>
-              <div class="flex-[50%]">
+              <div class="md:flex-[48%] flex-[100%]">
                 <img
                   data-v-1cf16b17=""
                   data-test-id="location-map-placeholder"
@@ -147,14 +149,15 @@
             </div>
             <div
               v-if="activeStep == 2"
-              class="flex flex-col items-center justify-center"
+              class="flex flex-col items-center"
             >
               <div class="relative">
                 <vl-map
                   :load-tiles-while-animating="true"
                   :load-tiles-while-interacting="true"
                   data-projection="EPSG:4326"
-                  style="height: 308px; width: 560px; cursor: grab"
+                  style="height: 308px; cursor: grab"
+                  class="md:w-[560px!important] sm:w-[460px!important] w-[290px!important]"
                 >
                   <vl-view
                     :zoom.sync="zoom"
@@ -203,7 +206,7 @@
                 />
               </div>
 
-              <div class="flex items-center gap-[10px] pt-[32px] w-[560px]">
+              <div class="flex items-center gap-[10px] pt-[32px] md:w-[560px!important] sm:w-[460px!important] w-[290px!important] justify-start">
                 <div>
                   <img
                     v-if="isLocationDataEmpty != 'Van naše oblasti dostave'"
@@ -262,7 +265,8 @@
                     leading-[21px]
                     rounded-[48px]
                     text-center
-                    w-[340px]
+                    sm:w-[340px]
+                    w-[260px]
                     h-[48px]
                     shadow-xl
                   "
@@ -443,8 +447,7 @@ export default {
 }
 
 .modal-container {
-  width: 800px;
-  margin: 0px auto;
+  max-width: 800px;
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);

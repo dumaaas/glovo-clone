@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-[#ffc244] ">
+  <div class="w-full bg-[#ffc244] bg-generator">
     <div
       class="flex justify-between gap-4 py-[30px] px-[7.5%]"
     >
@@ -39,3 +39,5 @@ export default {
   name: "Header",
 };
 </script>
+<style scoped>
+</style>

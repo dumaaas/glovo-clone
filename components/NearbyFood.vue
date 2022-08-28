@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white py-[60px] xl:px-[25.5%] px-[7.5%]">
+  <div class="bg-white py-[60px] xl:px-[25.5%] px-[7.5%] pt-[100px]">
     <h1 v-if="locationData" class="text-black text-[28px] leading-[34px] font-medium">
       <span
         class="
